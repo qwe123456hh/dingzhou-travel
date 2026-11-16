@@ -8,7 +8,12 @@
 <meta name="theme-color" content="#8c2f24">
 <meta property="og:title" content="定州 · 千年一塔，一眼千年">
 <meta property="og:description" content="83.7 米北宋砖木古塔、唐代文庙、清代科举考场——河北定州古城，一座被低估千年的小城。">
-<meta property="og:image" content="img/tower-front.webp">
+<meta property="og:image" content="https://qwe123456hh.github.io/dingzhou-travel/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qwe123456hh.github.io/dingzhou-travel/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗼</text></svg>">
 <style>
 :root{
@@ -27,13 +32,16 @@ a{color:var(--red);text-decoration:none}
 /* ---------- 顶部导航 ---------- */
 .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
   background:rgba(247,243,234,.88);border-bottom:1px solid var(--line)}
-.topbar .in{max-width:1120px;margin:0 auto;padding:8px 14px;display:flex;align-items:center;gap:14px}
+.topbar .in{max-width:1120px;margin:0 auto;padding:8px 14px;display:flex;align-items:center;gap:12px}
 .brand{font-weight:700;letter-spacing:.18em;font-size:15px;color:var(--red);white-space:nowrap}
 .brand span{color:var(--ink);letter-spacing:.05em;font-weight:400;font-size:12px}
-.nav{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;font-size:14px}
+.nav{display:flex;gap:15px;overflow-x:auto;scrollbar-width:none;font-size:14px;flex:1;min-width:0;-webkit-overflow-scrolling:touch}
 .nav::-webkit-scrollbar{display:none}
 .nav a{color:var(--ink2);white-space:nowrap;padding:4px 0;border-bottom:2px solid transparent}
 .nav a:hover{color:var(--red);border-color:var(--red)}
+.share{flex:none;border:1px solid var(--red);background:none;color:var(--red);border-radius:99px;
+  font:inherit;font-size:12px;letter-spacing:.14em;padding:4px 11px;cursor:pointer}
+.share:active{background:var(--red);color:#fff}
 
 /* ---------- 首屏 ---------- */
 .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;
@@ -71,9 +79,8 @@ h2 small{display:block;font-size:12px;font-weight:400;letter-spacing:.34em;color
 .sec-head p{margin:0;color:var(--ink2);font-size:14px;max-width:30em}
 .rule{height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:14px 0 26px}
 
-[data-fade]{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
-[data-fade].on{opacity:1;transform:none}
-
+html.js [data-fade]{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+html.js [data-fade].on{opacity:1;transform:none}
 /* ---------- 塔 ---------- */
 .tower{background:linear-gradient(180deg,var(--paper) 0%,var(--paper2) 100%)}
 .tower-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start}
@@ -206,6 +213,7 @@ footer a{color:#d8bd88}
       <a href="#route">线路</a>
       <a href="#tips">贴士</a>
     </nav>
+    <button class="share" id="shareBtn" type="button" aria-label="分享本页">分享</button>
   </div>
 </div>
 
@@ -321,7 +329,7 @@ footer a{color:#d8bd88}
         <div class="body">
           <h3>南城门 · 崇文街</h3>
           <div class="en">SOUTH GATE &amp; OLD STREET</div>
-          <p>古城南门在原址复建，城楼、瓮城、护城河连成一体。穿过城门洞就是崇文街，红灯夹道、青砖铺地，是定州夜里最热闹的一段老街。</p>
+          <p>古城南门在原址复建（2013 年起古城恢复工程），城楼、瓮城、护城河连成一体。穿过城门洞就是崇文街，红灯夹道、青砖铺地，是定州夜里最热闹的一段老街。</p>
           <ul>
             <li>城楼上看落日，护城河石桥上看倒影，是拍古城大片的两处机位</li>
             <li>街上集中了定瓷小店、文创铺与小吃摊，适合边走边吃</li>
@@ -392,8 +400,8 @@ footer a{color:#d8bd88}
     </div>
     <div class="gal">
       <figure><img src="img/tower-front.webp" alt="开元寺塔全景" loading="lazy" data-cap="开元寺塔 · 八角十一级，83.7 米"><figcaption>开元寺塔</figcaption></figure>
-      <figure><img src="img/wenmiao-tree.webp" alt="东坡双槐" loading="lazy" data-cap="文庙东坡双槐 · 相传苏轼手植"><figcaption>东坡双槐</figcaption></figure>
-      <figure><img src="img/gongyuan-gate.webp" alt="贡院大门" loading="lazy" data-cap="定州贡院 · 清代科举考场"><figcaption>贡院</figcaption></figure>
+      <figure><img src="img/wenmiao-tree.webp" alt="定州文庙院内古树" loading="lazy" data-cap="文庙古树 · 相传东坡双槐为苏轼手植"><figcaption>庙中古树</figcaption></figure>
+      <figure><img src="img/gongyuan-main.webp" alt="定州贡院魁阁号舍" loading="lazy" data-cap="定州贡院 · 魁阁号舍，清代科举考场"><figcaption>贡院号舍</figcaption></figure>
       <figure><img src="img/nancheng-bridge.webp" alt="南城门外护城河石桥" loading="lazy" data-cap="南城门 · 护城河石桥"><figcaption>城门与河</figcaption></figure>
       <figure><img src="img/wenmiao-gate.webp" alt="文庙院落" loading="lazy" data-cap="定州文庙 · 唐大中末年始建"><figcaption>文庙院墙</figcaption></figure>
       <figure><img src="img/tower-night.webp" alt="开元寺塔夜景" loading="lazy" data-cap="夜幕下的开元寺塔"><figcaption>夜塔</figcaption></figure>
@@ -495,11 +503,34 @@ footer a{color:#d8bd88}
 </div>
 
 <script>
-// 滚动淡入
-var io = new IntersectionObserver(function(es){
-  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
-},{threshold:.12});
-document.querySelectorAll('[data-fade]').forEach(function(el){ io.observe(el); });
+// 滚动淡入（无 JS / 不支持时全部可见）
+(function(){
+  document.documentElement.classList.add('js');
+  var els = document.querySelectorAll('[data-fade]');
+  function show(el){ el.classList.add('on'); }
+  if(!('IntersectionObserver' in window)){ els.forEach(show); return; }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ show(e.target); io.unobserve(e.target); } });
+  },{threshold:0, rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){ io.observe(el); });
+  // 兜底：若 2.5 秒后仍未出现（如截图、打印、内嵌预览），全部显示
+  setTimeout(function(){ els.forEach(function(el){ if(!el.classList.contains('on')) show(el); }); },2500);
+})();
+
+// 兼容：延迟加载的图片在 3 秒后全部加载，避免截图 / 内嵌预览出现空白
+setTimeout(function(){ document.querySelectorAll('img[loading="lazy"]').forEach(function(i){ i.loading='eager'; }); },3000);
+
+// 分享
+var sb=document.getElementById('shareBtn');
+if(sb){
+  var u=location.href, t=document.title;
+  sb.addEventListener('click',function(){
+    if(navigator.share){ navigator.share({title:t,text:'定州 · 中华第一塔：开元寺塔与古城古建之旅',url:u}).catch(function(){}); return; }
+    var ta=document.createElement('textarea'); ta.value=u; document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); sb.textContent='已复制'; }catch(e){ sb.textContent='复制失败'; }
+    setTimeout(function(){ sb.textContent='分享'; },1600); ta.remove();
+  });
+}
 
 // 灯箱
 var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
